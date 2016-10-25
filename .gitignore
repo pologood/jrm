@@ -1,3 +1,9 @@
+# all
+*.class
+*.zip
+*.tar
+*.gz
+
 # idea IDE
 .idae/
 *.iml
