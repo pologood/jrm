@@ -1,2 +1,15 @@
+# idea IDE
 .idae/
+*.iml
+
+# eclipse IDE
+*.class
+.project
+.classpath
+.settings/
+bin/
+
+# maven
 target/
+
+
