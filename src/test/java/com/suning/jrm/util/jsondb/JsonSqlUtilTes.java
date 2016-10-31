@@ -7,8 +7,7 @@ import org.junit.Assert;
  */
 public class JsonSqlUtilTes {
 
-    @org.junit.Test
-    public void testJson2select() throws Exception {
+    @org.junit.Test public void testJson2select() throws Exception {
         String exceptedSql = "select * from account where 1 = 1 and id = 1 and code = '001'";
         String json = "{\"id\":1,\"code\":\"001\"}";
         String tableName = "account";

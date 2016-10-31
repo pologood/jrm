@@ -22,27 +22,28 @@ public class JsonDbUtilTest {
             e.printStackTrace();
         }
     }
+
     Connection conn;
-    @Before
-    public void before() throws SQLException {
+
+    @Before public void before() throws SQLException {
         String url = "jdbc:mysql://127.0.0.1/test?zeroDateTimeBehavior=convertToNull";
         String username = "root";
         String password = "";
         conn = DriverManager.getConnection(url, username, password);
     }
-    @After
-    public void after() throws SQLException {
+
+    @After public void after() throws SQLException {
         conn.close();
     }
-    @Test
-    public void selectForList() throws Exception {
+
+    @Test public void selectForList() throws Exception {
         String sql = "select * from account";
         List rows = DbUtil.selectForList(conn, sql);
         System.out.println(rows);
 
     }
-    @Test
-    public void select() {
+
+    @Test public void select() {
         String json = "{\"id\":1,\"code\":\"001\"}";
         String tableName = "account";
         String result = JsonDbUtil.select(conn, tableName, json);
@@ -55,8 +56,7 @@ public class JsonDbUtilTest {
         System.out.println(result);
     }
 
-    @Test
-    public void insert() {
+    @Test public void insert() {
         String json = "{\"id\":1,\"code\":\"001\"}";
         String tableName = "account";
         String result = JsonDbUtil.select(conn, tableName, json);
